@@ -1,0 +1,54 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "rootDir": ".",
+    "baseUrl": "src",
+    "outDir": "dist",
+    "paths": {
+      "@/*": ["./*"],
+      "@db/*": ["./databases/*"]
+    },
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "strict": true,
+    // Warn on expressions and declarations with an implied 'any' type.
+    // Many npm pack do not has own definition, so not enable
+    // Emit '__importStar' and '__importDefault' helpers for runtime babel ecosystem compatibility
+    // and enable '--allowSyntheticDefaultImports' for typesystem compatibility.
+    // Convenient for import assert from 'assert'
+    // Allow javascript files to be compiled.
+    // Egg compile to in place, will throw can not overwrite js file
+    "allowJs": false,
+    "pretty": true,
+    "noEmitOnError": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    // Ensure non-undefined class properties are initialized in the constructor.
+    // When use DI, properties will be implicitly init
+    "strictPropertyInitialization": false,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    // Enables experimental support for ES7 decorators.
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "useUnknownInCatchVariables": true,
+    "incremental": false,
+    "declaration": false
+  },
+  "ts-node": {
+    // Tell ts-node CLI to install the --loader automatically, explained below
+    "esm": true,
+    "require": ["tsconfig-paths/register"]
+  }
+}
