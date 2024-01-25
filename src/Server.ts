@@ -25,6 +25,7 @@ export class Server extends AbstractServer {
 
   private async registerControllers() {
     const { app } = this;
+    // @ts-ignore
     const controllers: Array<Class<object>> = [FlowController];
     controllers.forEach((controller) => registerController(app, controller));
   }

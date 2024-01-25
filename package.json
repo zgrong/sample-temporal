@@ -11,6 +11,8 @@
   "author": "shou.ma@yingdao.com",
   "license": "ISC",
   "dependencies": {
+    "@temporalio/worker": "^1.9.0",
+    "@temporalio/workflow": "^1.9.0",
     "body-parser": "^1.20.2",
     "callsites": "^3.1.0",
     "convict": "^6.2.4",
